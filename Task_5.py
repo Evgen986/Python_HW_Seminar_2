@@ -4,7 +4,7 @@ import random
 
 def get_list(num):  # Функция заполнения списка рандомными значениями
     my_list = []
-    for i in range(num+1):
+    for i in range(num):
         my_list.append(random.randint(-50, 50))
     return my_list
 
