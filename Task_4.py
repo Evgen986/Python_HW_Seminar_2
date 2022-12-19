@@ -1,17 +1,19 @@
 # Задайте список из N элементов, заполненных числами из промежутка [-N, N]. 
 # Найдите произведение элементов на указанных позициях. Позиции хранятся в файле file.txt в одной строке одно число.
+import random
+
 
 def get_list(num_f):  # Функция заполнения списка
     my_list_f = []
-    for i in range(-num_f, num_f + 1):
-        my_list_f.append(i)
+    for i in range(num_f):
+        my_list_f.append(random.randint(-num_f, num_f + 1))
     return my_list_f
 
 
 flag = True  # Ввод числа N от пользователя и проверка на корректность
 while flag:
-    num = input('Введите число N>2: ')
-    if num.isdigit() and int(num)>2:
+    num = input('Введите число N>6: ')
+    if num.isdigit() and int(num) > 6:
         num = int(num)
         flag = False
     else:
